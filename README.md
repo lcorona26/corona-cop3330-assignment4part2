@@ -9,7 +9,7 @@ Adding new item to List:
 
 Removing/ Clearing Item(s) from List:
   
-    -Click on desired item and then click the remove button
+    -To remove an item from the list, click on desired item and then click the remove button
     -To clear list, simply just click the clear all button
 
 Editing List items:
