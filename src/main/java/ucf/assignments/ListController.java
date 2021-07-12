@@ -204,6 +204,7 @@ public class ListController implements Initializable {
     public void clearList(){
 
         //clear all items from list
+        itemList.getItems().clear();
     }
 
     public void displayCompleteItems(){
