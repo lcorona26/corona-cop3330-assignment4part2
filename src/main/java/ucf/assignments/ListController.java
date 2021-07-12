@@ -194,8 +194,10 @@ public class ListController implements Initializable {
     public void removeItem(){
 
         //assign an id to each row of text within table for accessing
+        int selectID = itemList.getSelectionModel().getSelectedIndex();
 
         //using id, access and remove row of item from table
+        itemList.getItems().remove(selectID);
 
     }
 
