@@ -1,0 +1,67 @@
+@startuml
+
+'https://plantuml.com/class-diagram
+
+class List{
+    main()
+    start()
+}
+
+class ListController{
+
+    -TextField: descriptionTextField
+    -DatePicker: datePicker
+    -FileChooser: fileChooser
+    ObservableList<LocalItem>:  list
+
+    + initialize()
+    + loadClicked()
+    + saveClicked()
+    + addItemClicked()
+    + addListClicked()
+    + removeClicked()
+    + clearClicked()
+    + updateCLicked()
+    + incompletedClicked()
+    + completedClicked()
+    + loadList()
+    + saveList()
+    + addItem()
+    + updateItem()
+    + addList()
+    + removeItem()
+    + clearList()
+    + displayCompleteItems()
+    + displayIncompleteItems()
+
+}
+class LocalItem{
+
+    - String: description
+    - LocalDate: date
+
+    + getDescription()
+    + setDescription()
+    + getDate()
+    + setDate()
+    + LocalItem()
+    + toString()
+
+}
+class Update{
+     - String description
+
+     + getDescription()
+     + setDescription()
+     + LocalItem()
+     + toString()
+}
+
+javafx.Application <|-- List
+
+List <- ListController
+ListController - Update
+ListController - LocalItem
+
+
+@enduml
