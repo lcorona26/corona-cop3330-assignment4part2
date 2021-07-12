@@ -139,14 +139,19 @@ public class ListController implements Initializable {
     public void addItem(){
 
         //get values from description text field and calendar
-
+        list.add(new LocalItem(datePicker.getValue(), descriptionTextField.getText()));
 
         //add values to list
-
+        itemList.setItems(list);
 
 
         //adding checkbox next to items
-
+        itemList.setCellFactory(CheckBoxListCell.forListView(new Callback<LocalItem, ObservableValue<Boolean>>() {
+            @Override
+            public ObservableValue<Boolean> call(LocalItem param) {
+                return null;
+            }
+        }));
 
     }
     public void updateItem(){
