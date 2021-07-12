@@ -12,9 +12,6 @@ public class LocalItem {
     private String description;
     private LocalDate date;
 
-    public LocalItem() {
-    }
-
 
     public String getDescription() {
         return description;
