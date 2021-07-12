@@ -177,8 +177,16 @@ public class ListController implements Initializable {
     public void addList(){
 
         //open a new list in a new window
+        String[] args = new String[0];
+        List opensList = new List();
 
-
+        //recalls application launch everytime button "New List" is clicked and handles exception
+        try{
+            opensList.start(new Stage());
+            List.main(args);
+        }catch(IllegalStateException e){
+            System.out.println("");
+        }
 
     }
 
