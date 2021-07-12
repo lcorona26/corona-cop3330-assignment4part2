@@ -49,11 +49,11 @@ class LocalItem{
 
 }
 class Update{
-     - String description
+     - String: description
 
      + getDescription()
      + setDescription()
-     + LocalItem()
+     + Update()
      + toString()
 }
 
