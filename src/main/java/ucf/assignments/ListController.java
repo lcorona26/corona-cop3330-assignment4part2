@@ -157,9 +157,20 @@ public class ListController implements Initializable {
     public void updateItem(){
 
         //when user clicks on list item, text will be sent into description field for editing
+        int i = 0;
+        itemList.setOnMouseClicked(e -> {
+            String selectedItem = itemList.getSelectionModel().getSelectedItem().toString();
+            int selectID = itemList.getSelectionModel().getSelectedIndex();
+            descriptionTextField.setText(selectedItem);
+
+            selectID = i;
+        });
 
 
         //update edited item
+        itemList.getItems().remove(i);
+        itemList.getItems().add(i, new Update(descriptionTextField.getText()));
+
 
     }
 
